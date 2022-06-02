@@ -101,7 +101,7 @@ endmodule
 <img width="356" alt="output2" src="https://user-images.githubusercontent.com/93427923/171608248-31d6098c-6402-415a-a4e4-fea3e357f9f4.png">
 
 ### TRUTHTABLE
-###![encodertt](https://user-images.githubusercontent.com/93427923/171608406-f2a1ea02-4605-4c44-a5bb-3524796fae5b.png)
+![encoder truth](https://user-images.githubusercontent.com/93427923/171651956-07cb464c-1baa-4ae3-a36b-a58f78e36360.png)
 
 ## DECODER
 ```
