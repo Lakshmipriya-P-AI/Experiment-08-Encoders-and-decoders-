@@ -1,7 +1,13 @@
 # Experiment-08- Encoders-and-decoders 
-### AIM: To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its outputs
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM: 
+To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its outputs
+
+### HARDWARE REQUIRED:  
+– PC, Cyclone II , USB flasher
+
+### SOFTWARE REQUIRED:  
+Quartus prime
+
 ### THEORY 
 
 ## Encoders
@@ -14,7 +20,6 @@ As an example, let’s consider Octal to Binary encoder. As shown in the followi
 
 ![image](https://user-images.githubusercontent.com/36288975/171543588-bc0746df-a173-4b35-989e-5fb7d385fe8a.png)
 ## Figure -01 3 to 8 Encoder 
-
 
 Implementation –
 
@@ -49,48 +54,79 @@ D7 = X Y Z
 ![image](https://user-images.githubusercontent.com/36288975/171543978-ee2d0671-2846-40a1-8705-507fd6287a49.png)
 ## Figure -03 8 to 3 Decoder 
 
-
-
 ![image](https://user-images.githubusercontent.com/36288975/171543866-5a6eace6-8683-49d7-9c4f-a7cb30ec3035.png)
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+## Step 1:
+Open Quartus II and select new project and choose the file location.
 
+## Step 2:
+Module Declaration. Module should have the file name.
 
+## Step 3:
+Input-Output Delecaration.
+
+## Step 4:
+Use assign to define the functionality of logic circuits.
+
+## Step 5:
+At the end give endmodule.
+
+## Step 6:
+Run the program and choose RTL viewer to get RTL realization.
 
 ### PROGRAM 
-/*
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: Lakshmi Priya.P
+RegisterNumber:  212221230053
+```
 
-
-
-
-
+## ENCODER
+```
+module Ex08(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a,b,c;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
 
 ### RTL LOGIC  
-
-
-
-
-
-
-
+![encoderpic](https://user-images.githubusercontent.com/93427923/171608079-0b270c04-d27f-4965-8995-7f973fdfb688.png)
 
 ### TIMING DIGRAMS  
+<img width="356" alt="output2" src="https://user-images.githubusercontent.com/93427923/171608248-31d6098c-6402-415a-a4e4-fea3e357f9f4.png">
 
+### TRUTHTABLE
+###![encodertt](https://user-images.githubusercontent.com/93427923/171608406-f2a1ea02-4605-4c44-a5bb-3524796fae5b.png)
 
+## DECODER
+```
+module Ex08(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+```
 
+### RTL LOGIC  
+![image](https://user-images.githubusercontent.com/93427923/171608672-709d8e37-0ae0-4722-b074-68eccba9040d.png)
 
+### TIMING DIGRAMS  
+<img width="1262" alt="output4" src="https://user-images.githubusercontent.com/93427923/171608728-64ad0793-067c-4bc7-826b-8aa024e91b95.png">
 
-### TRUTH TABLE 
-
-
-
-
-
+### TRUTHTABLE
+![decodertt](https://user-images.githubusercontent.com/93427923/171608795-74b6b293-09a3-4343-843a-8c6da756cde8.jpg)
 
 ### RESULTS 
+Thus, 8 to 3 Encoder and  3 to 8 Decoder is implemented using verilog and its outputs is validated.
